@@ -32,8 +32,15 @@ p{
     margin: 30px 0;
 }
 
-.wrapper{
-    width: 960px;
+.wrapper1{
+    padding: 50px;
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.wrapper2{
+    padding: 90px;
+    width: 1250px;
     margin: 0 auto;
 }
 
@@ -67,10 +74,10 @@ p{
 
 .character01{
     background: url(img/characters/circle-guy.png) no-repeat 0 0;
-    background-size: 100%;
+    background-size: 90%;
     width: 363px;
     height: 344px;
-    position: absolute; top: 117px; right: 89px;
+    position: absolute; top: 380px; right: 90px;
 }
 
 .character02{
@@ -78,15 +85,15 @@ p{
     background-size: 50%;
     width: 878px;
     height: 1162px;
-    position: absolute; top: 213px; right: 277px;
+    position: absolute; top: 100px; right: -50px;
 }
 
 .character03{
     background: url(img/characters/eish-guy.png) no-repeat 0 0;
-    background-size: 50%;
+    background-size: 40%;
     width: 600px;
     height: 794px;
-    position: absolute; top: 74px; right: 109px;
+    position: absolute; top: 20px; right: -90px;
 }
 
 a.cta,
@@ -100,13 +107,20 @@ button.cta{
     padding: 20px 30px;
     border-radius: 10px;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+a.cta:active,
+button.cta:active{
+    opacity: .7;
 }
 
 a.cta.alt,
 button.cta.alt{
     background-color: #FFD400;
     color: #111111;
-    box-shadow: 0 0 0 10px rgba(0,0,0,.15);
+    box-shadow: 0 0 0 5px rgba(0,0,0,.15);
 }
 
 nav{
@@ -115,6 +129,7 @@ nav{
     box-shadow: 0 5px 8px rgba(0,0,0,.2);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav .logo{
@@ -122,9 +137,9 @@ nav .logo{
     width: 300px;
     height: 80px;
     position: absolute; top: 50%; left: 0;
-    margin-top: -20px;
+    margin-top: -35px;
     margin-left: 10px;
-    background: url(img/TheGangLOGO2.png) no-repeat 0 0;
+    background: url(img/TheGangLOGO.png) no-repeat 0 0;
     background-size: 100%;
     overflow: hidden;
     text-indent: -999px;
@@ -177,7 +192,128 @@ nav ul li a{
     font-weight: 800;
 }
 
+.separator{
+    width: 470px;
+    height: 10px;
+    background-color: #111111;
+    margin: 70px auto;
+}
 
+.story h3{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.nb-list{
+    width: 450px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #EDEDED;
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
+}
+
+.nb-list li{
+    height: 70px;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    padding: 6px 20px;
+    box-sizing: border-box;
+}
+
+.nb-list li.Red {background-color: red;}
+.nb-list li.Blue {background-color: blue;}
+.nb-list li.Grey {background-color: rgba(0,0,0,.1);}
+.nb-list li.Yellow{
+    background-color: yellow;
+    color: #111111;
+}
+.nb-list li.Pink {background-color: pink;}
+.nb-list li.Salmon {background-color: salmon;}
+
+.nb-list li.dragging{
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    right: -30px;
+    transform: rotate(6deg);
+    box-shadow: 0 2px 14px rgba(0,0,0,.3);
+    background-color: yellow;
+    color: #111111;
+}
+
+.nb-list li.dragging:after{
+    content:'';
+    display: block;
+    position: absolute;
+    width: 54px;
+    height: 60px;
+    background: url(img/hand2.png) no-repeat 0 0;
+    background-size: 100%;
+    bottom: -30px;
+    left: 60%;
+
+}
+
+.gang-img{
+    display: block;
+    margin: 0 auto;
+}
+
+footer{
+    text-align: center;
+    color: rgba(0,0,0,.4);
+    font-size: 20px;
+    margin: 85px 0 45px;
+    font-weight: bold;
+}
+
+footer a{
+    color: rgba(0,0,0,.4)
+}
+
+
+.popup{
+    display: none;
+}
+
+
+
+/* 
+
+<div class="separator"></div>
+
+<div class="story" id="TheStory">
+    <ul class="nb-list">
+        <li class="Blue">Rock n Roll</li>
+        <li class="Grey">&nbsp;</li>
+        <li class="dragging">Laughter</li>
+        <li class="Red">Square Offs</li>
+        <li class="Pink">Circuitous Routes</li>
+        <li class="Salmon">Trigonometry</li>
+        <li class="Blue">Rad Hats</li>
+        <li class="Yellow"> Silly</li>
+    </ul>
+    <h3>Left: things We Find Important</br>
+        Below: Our Story</h3>
+    <p>Once upon a time there was a group of shapes. They were mostly black and rectangular. They were mean and
+        serious.</p>
+    <p>And so they kicked the 3 shapes that didn't conform out of their gang,which was called the Right Angled Gang.
+    </p>
+    <p>And so these 3 shapes were very sad, but found great joy and comfort being around each other. They soon
+        started having alot of fun, started rocking and rolling, started being silly, and became the most well-known
+        shapes gang in the universe.</p>
+    <p>They even started making fun of squares and rectangles in what they like to call 'Square Offs'!</p>
+</div>
+
+<div class="separator"></div>
+
+*/
 /*
 
 <nav>
