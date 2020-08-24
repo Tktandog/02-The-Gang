@@ -274,44 +274,148 @@ footer{
 }
 
 footer a{
-    color: rgba(0,0,0,.4)
+    color: rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 
 .popup{
     display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
 }
+
+.popup.show{
+    display: block;
+}
+
+.popup .blanket{
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.popup .content{
+    box-sizing: border-box;
+    padding: 30px 40px;
+    width: 960px;
+    height: 500px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -250px;
+    margin-left: -480px;
+}
+
+.popup h2{
+    margin: 10px 0 20px;
+}
+
+.popup .cta{
+    margin-top: 40px;
+}
+
+.popup .close{
+    width: 80px;
+    height: 80px;
+    background-color: #FF3300;
+    background: #FF3300 url(img/closeclose.png) no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-indent: -999px;
+    cursor: pointer;
+}
+
+.popup .row{
+    
+}
+
+.popup .row:after{
+    content:'';
+    display: table;
+    clear: both;
+}
+
+.popup .item{
+    float: left;
+    width: 415px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.popup .item:first-child{
+    margin-left: 0;
+}
+
+.popup .item label{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popup .item input[type='text']{
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    border: 4px solid #111111;
+    height: 70px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+}
+
 
 
 
 /* 
 
-<div class="separator"></div>
+<div class="popup">
+        <div class="blanket"></div>
+        <div class="content">
+            <h2>Fill in your Details</h2>
+            <form action="">
+                <div class="item">
+                    <label> Your First Name</label>
+                    <input type="text" placeholder="AwesomeFace" value="Shirley">
+                </div>
+                <div class="item">
+                    <label> Your Last Name</label>
+                    <input type="text" placeholder="Circle Face">
+                </div>
+                <div class="item">
+                    <label> Your Favorite Food</label>
+                    <input type="text" placeholder="Subs">
+                </div>
+                <div class="item">
+                    <label> Your Favorite color</label>
+                    <input type="text" placeholder="White">
+                </div>
+                <button class="cta">I want in!</button>
 
-<div class="story" id="TheStory">
-    <ul class="nb-list">
-        <li class="Blue">Rock n Roll</li>
-        <li class="Grey">&nbsp;</li>
-        <li class="dragging">Laughter</li>
-        <li class="Red">Square Offs</li>
-        <li class="Pink">Circuitous Routes</li>
-        <li class="Salmon">Trigonometry</li>
-        <li class="Blue">Rad Hats</li>
-        <li class="Yellow"> Silly</li>
-    </ul>
-    <h3>Left: things We Find Important</br>
-        Below: Our Story</h3>
-    <p>Once upon a time there was a group of shapes. They were mostly black and rectangular. They were mean and
-        serious.</p>
-    <p>And so they kicked the 3 shapes that didn't conform out of their gang,which was called the Right Angled Gang.
-    </p>
-    <p>And so these 3 shapes were very sad, but found great joy and comfort being around each other. They soon
-        started having alot of fun, started rocking and rolling, started being silly, and became the most well-known
-        shapes gang in the universe.</p>
-    <p>They even started making fun of squares and rectangles in what they like to call 'Square Offs'!</p>
-</div>
-
-<div class="separator"></div>
+            </form>
+            <button class="close">Close Button</button>
+        </div>
+    </div>
 
 */
 /*
